@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-anton: 'Anton', Impact, sans-serif;
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #06080F;
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #06080F;
+  color: #E2E8F0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sélection de texte aux couleurs VOLTA */
+::selection {
+  background-color: #FFFA08;
+  color: #06080F;
+}
+
+/* Titres percutants avec Anton (casse naturelle) */
+h1, h2, h3, .font-anton {
+  font-family: var(--font-anton);
+  letter-spacing: 0.02em;
+}
+
+/* Lignes courtes recommandées < 80 caractères */
+p, .reading-text {
+  max-width: 75ch;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #06080F;
+}
+::-webkit-scrollbar-thumb {
+  background: #09314A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFFA08;
+}
+
+/* Animations de transition */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Effet Flip pour le compte à rebours */
+.flip-card {
+  perspective: 1000px;
+}
+
+/* Glow jaune subtil */
+.yellow-glow {
+  box-shadow: 0 0 25px rgba(255, 250, 8, 0.22);
+}
+
+.yellow-glow-lg {
+  box-shadow: 0 0 45px rgba(255, 250, 8, 0.35);
+}
+
+.card-gradient {
+  background: linear-gradient(180deg, rgba(9, 49, 74, 0.6) 0%, rgba(6, 8, 15, 0.95) 100%);
+  border: 1px solid rgba(9, 49, 74, 0.7);
+}
+
+.card-gradient:hover {
+  border-color: rgba(255, 250, 8, 0.45);
+}
