@@ -15,7 +15,6 @@ import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
 import MobileStickyBar from "@/components/MobileStickyBar";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import FlyToCartOverlay from "@/components/FlyToCartOverlay";
 
 export default function Home() {
@@ -62,7 +61,6 @@ export default function Home() {
       {/* Interactive & Functional Elements */}
       <CartDrawer />
       <MobileStickyBar />
-      <FloatingWhatsApp />
       <FlyToCartOverlay />
     </div>
   );
